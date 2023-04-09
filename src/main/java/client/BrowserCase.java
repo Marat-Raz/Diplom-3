@@ -22,9 +22,8 @@ public class BrowserCase {
                 return new ChromeDriver();
 
             case "chromeNoManager":
-                ChromeOptions optionsCh = new ChromeOptions();
-                optionsCh.addArguments("--remote-allow-origins=*");
-                return new ChromeDriver(optionsCh);
+                System.setProperty("webdriver.http.factory", "jdk-http-client");
+                return new ChromeDriver();
 
             default:
                 throw new RuntimeException("Ваш браузер пока не поддерживается - только Хром и Яндекс!");

@@ -10,13 +10,10 @@ import static pages.CommonLocatorsUrls.EXIT_BUTTON;
 import static pages.CommonLocatorsUrls.SET_BURGER_INDICATOR;
 
 public class LogoutTest extends StartTest{
-    ValidatableResponse response, loginResponse;
-    boolean result;
-
     @Test
     @DisplayName("Переход в «Личный кабинет»")
     public void TransferToPersonalAccountTest(){
-        response = userClient.createUser(user);
+        ValidatableResponse response = userClient.createUser(user);
         MainPage mainPage = new MainPage(driver);
         mainPage.clickTextLink();
         AuthorizationPage authorizationPage = new AuthorizationPage(driver);
@@ -24,7 +21,7 @@ public class LogoutTest extends StartTest{
         driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
         mainPage.clickTextLink();
         driver.findElement(EXIT_BUTTON).click();
-        result = authorizationPage.loginButtonIsDisplay();
+        boolean result = authorizationPage.loginButtonIsDisplay();
 
         assertTrue(result);
 

@@ -12,7 +12,6 @@ import static pages.CommonLocatorsUrls.SET_BURGER_INDICATOR;
 public class PersonalAccountPageTest extends StartTest {
     ValidatableResponse response;
     boolean resultOne, resultTwo;
-
     @Test
     @DisplayName("Переход в «Личный кабинет»")
     public void TransferToPersonalAccountTest(){
@@ -27,7 +26,5 @@ public class PersonalAccountPageTest extends StartTest {
 
         assertTrue(resultOne);
         assertTrue(resultTwo);
-
     }
-
 }

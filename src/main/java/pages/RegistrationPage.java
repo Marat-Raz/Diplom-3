@@ -31,8 +31,7 @@ public class RegistrationPage {
         driver.findElement(ENTER_LINK).click();
     }
     public boolean errorTextIsDisplay() {
-        boolean isDisplayed = driver.findElement(ERROR_TEXT).isDisplayed();
-        return isDisplayed;
+        return driver.findElement(ERROR_TEXT).isDisplayed();
     }
     @Step("Заполнение полей ввода на странице «Регистрация» и нажатие кнопки «Зарегистрироваться»")
     public void enterRegistrationDataAndClickRegisterButton(User user) {

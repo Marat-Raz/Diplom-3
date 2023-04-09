@@ -4,7 +4,6 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import usermodel.User;
 import usermodel.UserCredentials;
 
 import java.time.Duration;
@@ -12,7 +11,6 @@ import java.time.Duration;
 import static pages.CommonLocatorsUrls.*;
 
 public class AuthorizationPage {
-    User user;
     private final WebDriver driver;
      public AuthorizationPage(WebDriver driver) {
         this.driver = driver;
