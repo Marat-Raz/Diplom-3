@@ -8,19 +8,13 @@ import static org.junit.Assert.assertTrue;
 
 public class RegistrationTest extends StartTest{
     private RegistrationPage registrationPage;
-    private AuthorizationPage authorizationPage;
     boolean result;
-/*    @Before
-    public void setUp() {
-        user = UserGenerator.getUser();
-        userClient = new UserClient();
-    }*/
     @Test
     public void correctRegistrationOnRegistrationPageTest() {
         registrationPage = new RegistrationPage(driver);
         registrationPage.openRegistrationPage();
         registrationPage.enterRegistrationDataAndClickRegisterButton(user);
-        authorizationPage = new AuthorizationPage(driver);
+        AuthorizationPage authorizationPage = new AuthorizationPage(driver);
         result = authorizationPage.loginButtonIsDisplay();
 
         assertTrue(result);

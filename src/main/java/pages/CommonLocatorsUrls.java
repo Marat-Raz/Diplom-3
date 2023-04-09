@@ -6,9 +6,12 @@ public class CommonLocatorsUrls {
     public static final String MAIN_PAGE_URL = "https://stellarburgers.nomoreparties.site";
     public static final String LOGIN_PAGE_URL = "https://stellarburgers.nomoreparties.site/login";
     public static final String REGISTRATION_PAGE_URL = "https://stellarburgers.nomoreparties.site/register";
-    public static final String PASSWORD_RECOVERY_URL = "https://stellarburgers.nomoreparties.site/register";
+    public static final String PASSWORD_RECOVERY_URL = "https://stellarburgers.nomoreparties.site/forgot-password";
 
     public static final By TEXT_LINK = By.xpath(".//p[text()='Личный Кабинет']");
+    public static final By ACCOUNT_LINK = By.xpath(".//a[text()='Профиль']");
+    public static final By EXIT_BUTTON = By.xpath(".//button[text()='Выход']");
+
     public static final By MENU_BUN = By.xpath(".//span[text()='Булки']");
     public static final By MENU_FILLINGS = By.xpath(".//span[text()='Начинки']");
     public static final By CURRENT_MENU = By.xpath("//div[contains(@class,'tab_tab__1SPyG tab_tab_type_current__2BEPc')]");
