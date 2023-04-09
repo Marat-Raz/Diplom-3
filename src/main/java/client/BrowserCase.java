@@ -11,19 +11,18 @@ public class BrowserCase {
         switch (browserName) {
 
             case "yandex":
-                System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\bin\\yandex\\yandexdriver.exe");
+                System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\bin\\yandexdriver.exe");
                 ChromeOptions options = new ChromeOptions();
                 return new ChromeDriver(options);
-
 
             case "chromeWebDriverManager":
                 System.setProperty("webdriver.http.factory", "jdk-http-client");
                 WebDriverManager.chromedriver().setup();
                 return new ChromeDriver();
 
-            case "chromeNoManager":
+/*            case "chromeNoManager":
                 System.setProperty("webdriver.http.factory", "jdk-http-client");
-                return new ChromeDriver();
+                return new ChromeDriver();*/
 
             default:
                 throw new RuntimeException("Ваш браузер пока не поддерживается - только Хром и Яндекс!");

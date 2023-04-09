@@ -19,7 +19,7 @@ public class AuthorizationPage {
     public void openAuthorizationPage() {
         driver.get(LOGIN_PAGE_URL);
     }
-    @Step("Заполняем поля формы авторизации - e-mail  и пароль Пользователя, нажать кнопку - Войти")
+    @Step("Заполнить поля формы авторизации - e-mail и пароль Пользователя, нажать кнопку - Войти")
     public void enterAuthorizationDataAndClickLoginEnterButton(UserCredentials userCredentials) {
         (new WebDriverWait(driver, Duration.ofSeconds(3))).until(ExpectedConditions.urlToBe(LOGIN_PAGE_URL));
         driver.findElement(INPUT_EMAIL).sendKeys(userCredentials.getEmail());

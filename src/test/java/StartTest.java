@@ -34,15 +34,15 @@ public class StartTest {
     @Step("Запуск браузера и создание профиля пользователя")
     public void setUp() {
 
-        String[] options = {"YandexBrowser", "Google Chrome"};
+        String[] options = {"Google Chrome", "YandexBrowser"};
         int x = JOptionPane.showOptionDialog(null, "Select the browser in which the tests will be performed",
                 "Click a button",
                 JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options);
-        //System.out.println(x);
         if (x == 0 ) {
-            driver = BrowserCase.getBrowser("yandex");
+            driver = BrowserCase.getBrowser("chromeWebDriverManager");
         } else if (x == 1) {
-            driver = BrowserCase.getBrowser("chromeNoManager");
+            driver = BrowserCase.getBrowser("yandex");
+
         }
 
         driver.get(MAIN_PAGE_URL);
