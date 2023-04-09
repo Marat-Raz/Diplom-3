@@ -43,4 +43,7 @@ public class MainPage {
     public void clickTextLink() {
         driver.findElement(TEXT_LINK).click();
     }
+    public boolean mainPageIsOpen() {
+        return driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+    }
 }

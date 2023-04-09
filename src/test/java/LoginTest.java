@@ -8,7 +8,6 @@ import pages.RegistrationPage;
 import usermodel.UserCredentials;
 
 import static org.junit.Assert.assertTrue;
-import static pages.CommonLocatorsUrls.SET_BURGER_INDICATOR;
 
 public class LoginTest extends StartTest{
     private AuthorizationPage authorizationPage;
@@ -24,7 +23,7 @@ public class LoginTest extends StartTest{
         mainPage.clickLoginButton();
         authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        result = driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        result = mainPage.mainPageIsOpen();;
 
         assertTrue(result);
     }
@@ -36,7 +35,7 @@ public class LoginTest extends StartTest{
         mainPage.clickTextLink();
         authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        result = driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        result = mainPage.mainPageIsOpen();
 
         assertTrue(result);
     }
@@ -49,7 +48,8 @@ public class LoginTest extends StartTest{
         registrationPage.clickEnterLink();
         authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        result = driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        mainPage = new MainPage(driver);
+        result = mainPage.mainPageIsOpen();;
 
         assertTrue(result);
     }
@@ -62,7 +62,8 @@ public class LoginTest extends StartTest{
         passwordRecoveryPage.clickEnterLink();
         authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        result = driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        mainPage = new MainPage(driver);
+        result = mainPage.mainPageIsOpen();;
 
         assertTrue(result);
     }

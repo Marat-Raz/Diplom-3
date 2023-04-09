@@ -7,7 +7,6 @@ import usermodel.UserCredentials;
 
 import static org.junit.Assert.assertTrue;
 import static pages.CommonLocatorsUrls.EXIT_BUTTON;
-import static pages.CommonLocatorsUrls.SET_BURGER_INDICATOR;
 
 public class LogoutTest extends StartTest{
     @Test
@@ -18,7 +17,7 @@ public class LogoutTest extends StartTest{
         mainPage.clickTextLink();
         AuthorizationPage authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        mainPage.mainPageIsOpen();
         mainPage.clickTextLink();
         driver.findElement(EXIT_BUTTON).click();
         boolean result = authorizationPage.loginButtonIsDisplay();

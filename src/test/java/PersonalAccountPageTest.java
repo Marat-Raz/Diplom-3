@@ -7,7 +7,6 @@ import usermodel.UserCredentials;
 
 import static org.junit.Assert.assertTrue;
 import static pages.CommonLocatorsUrls.ACCOUNT_LINK;
-import static pages.CommonLocatorsUrls.SET_BURGER_INDICATOR;
 
 public class PersonalAccountPageTest extends StartTest {
     ValidatableResponse response;
@@ -20,7 +19,7 @@ public class PersonalAccountPageTest extends StartTest {
         mainPage.clickTextLink();
         AuthorizationPage authorizationPage = new AuthorizationPage(driver);
         authorizationPage.enterAuthorizationDataAndClickLoginEnterButton(UserCredentials.from(user));
-        resultOne = driver.findElement(SET_BURGER_INDICATOR).isDisplayed();
+        resultOne = mainPage.mainPageIsOpen();;
         mainPage.clickTextLink();
         resultTwo = driver.findElement(ACCOUNT_LINK).isDisplayed();
 

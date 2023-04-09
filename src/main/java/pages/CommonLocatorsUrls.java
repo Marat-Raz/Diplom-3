@@ -26,5 +26,8 @@ public class CommonLocatorsUrls {
     public static final By REGISTER_BUTTON = By.xpath("//button[text()='Зарегистрироваться']");
     public static final By ENTER_LINK = By.xpath(".//*[text()='Войти']");
     public static final By ERROR_TEXT = By.xpath(".//p[text()='Некорректный пароль']"); //input__error text_type_main-default
+    public static final By APPHEADER_CONSTRUCTOR = By.className("AppHeader_header__link__3D_hX");
+    public static final By APPHEADER_STELLAR = By.className("AppHeader_header__logo__2D0X2");
+
 
 }
