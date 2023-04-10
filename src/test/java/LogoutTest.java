@@ -1,5 +1,4 @@
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.response.ValidatableResponse;
 import org.junit.Test;
 import pages.AuthorizationPage;
 import pages.MainPage;
@@ -10,9 +9,9 @@ import static pages.CommonLocatorsUrls.EXIT_BUTTON;
 
 public class LogoutTest extends StartTest{
     @Test
-    @DisplayName("Переход в «Личный кабинет»")
+    @DisplayName("Выход из аккаунта")
     public void TransferToPersonalAccountTest(){
-        ValidatableResponse response = userClient.createUser(user);
+        userClient.createUser(user);
         MainPage mainPage = new MainPage(driver);
         mainPage.clickTextLink();
         AuthorizationPage authorizationPage = new AuthorizationPage(driver);
