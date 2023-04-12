@@ -10,7 +10,7 @@ import static pages.CommonLocatorsUrls.EXIT_BUTTON;
 public class LogoutTest extends StartTest{
     @Test
     @DisplayName("Выход из аккаунта")
-    public void TransferToPersonalAccountTest(){
+    public void LogoutAccountTest(){
         userClient.createUser(user);
         MainPage mainPage = new MainPage(driver);
         mainPage.clickTextLink();
